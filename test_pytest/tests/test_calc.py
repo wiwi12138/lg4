@@ -64,8 +64,8 @@ class TestCalc:
         ['a', 0],
         [0.2, 'b'],
         ['.', 5],
-        [0.2, '*']
-
+        [0.2, '*'],
+        [0.2, '-']
     ])
     @allure.story("异常值除法用例")
     def test_div2(self, a, b):
