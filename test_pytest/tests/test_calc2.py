@@ -1,8 +1,7 @@
 # -*— coding:utf-8 —*—
-# @time ：2020/10/2818:59
+# @time ：2020/10/3019:03
 # @Auttor :wiwi
-# @File :test_calc.py
-# 调用函数
+# @File :test_calc2.py
 import allure
 import pytest
 
@@ -30,14 +29,13 @@ class TestCalc:
     def test_mul(self, a, b, c):
         assert self.calc.mul(a, b) == c
 
-    @pytest.mark.parametrize(('a,b'),
+    @pytest.mark.parametrize('a,b',[
         ['a',3],
-        [4,'t']
-        [4, ',']
-
-    )
+        [4,'t'],
+        [4,' ']
+    ])
     @allure.story("异常值乘法用例")
-    def test_mul(self, a, b):
+    def test_mul2(self, a, b):
         # assert self.calc.mul(a, b) == c
         with pytest.raises(Exception):
             assert self.calc.div(a, b)
